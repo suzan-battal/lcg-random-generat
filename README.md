@@ -164,7 +164,3 @@ Bu proje, rastgele sayi uretimi algoritmalarini ogretmek icin tasarlanmistir. Ur
 
 **Suzan**  
 Beyza Hoca - Kriptografi Dersi Projesi
-
-## Lisans
-
-Bu proje egitim amacli gelistirilmistir ve serbest kullanilabilir.
