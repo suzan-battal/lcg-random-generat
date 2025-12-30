@@ -1,75 +1,71 @@
-# 🎲 LCG Rastgele Sayı Üreteci
+# LCG Rastgele Sayi Ureteci
 
-**Linear Congruential Generator (LCG)** algoritması kullanılarak geliştirilmiş bir rastgele sayı üreteci projesi.
+**Linear Congruential Generator (LCG)** algoritmasi kullanilarak gelistirilmis bir rastgele sayi ureteci projesi.
 
-## 📚 Proje Hakkında
+## Proje Hakkinda
 
-Bu proje, kriptografi ve istatistik derslerinde yaygın olarak öğretilen **Linear Congruential Generator (LCG)** algoritmasının Python implementasyonudur. LCG, en yaygın kullanılan pseudo-random number generator algoritmalarından biridir.
+Bu proje, kriptografi ve istatistik derslerinde yaygin olarak ogretilen **Linear Congruential Generator (LCG)** algoritmasinin Python implementasyonudur. LCG, en yaygin kullanilan pseudo-random number generator algoritmalarindan biridir.
 
-### 🧮 LCG Algoritması
+### LCG Algoritmasi
 
-LCG aşağıdaki matematiksel formülü kullanır:
+LCG asagidaki matematiksel formulu kullanir:
 
 ```
 X(n+1) = (a × X(n) + c) mod m
 ```
 
 **Parametreler:**
-- **m** (Modulus): 2³² = 4,294,967,296
-- **a** (Çarpan): 1,664,525 (Park & Miller'ın önerisi)
-- **c** (Artış): 1,013,904,223 (Numerical Recipes)
-- **X₀** (Seed): Başlangıç değeri
+- **m** (Modulus): 2^32 = 4,294,967,296
+- **a** (Carpan): 1,664,525 (Park & Miller'in onerisi)
+- **c** (Artis): 1,013,904,223 (Numerical Recipes)
+- **X0** (Seed): Baslangic degeri
 
-## 🚀 Özellikler
+## Ozellikler
 
-✅ **Sıfırdan yazılmış LCG algoritması**  
-✅ **Çoklu rastgele sayı fonksiyonları** (random, randint, choice, shuffle, sample)  
-✅ **İstatistiksel analiz araçları** (Dağılım analizi, Chi-Square testi)  
-✅ **Görselleştirmeler** (Histogram, 2D/3D scatter plot)  
-✅ **8 farklı kullanım örneği**  
-✅ **Detaylı dokümantasyon**
+- Sifirdan yazilmis LCG algoritmasi
+- Coklu rastgele sayi fonksiyonlari (random, randint, choice, shuffle, sample)
+- Istatistiksel analiz araclari (Dagilim analizi, Chi-Square testi)
+- Gorsellestirmeler (Histogram, 2D/3D scatter plot)
+- 8 farkli kullanim ornegi
+- Detayli dokumantasyon
 
-## 📁 Dosya Yapısı
+## Dosya Yapisi
 
 ```
 RASTGELE SAYI/
 │
-├── random_generator.py    # Ana LCG algoritması
-├── visualize.py          # İstatistiksel analiz ve görselleştirme
-├── examples.py           # 8 farklı kullanım örneği
-├── requirements.txt      # Gerekli kütüphaneler
+├── random_generator.py    # Ana LCG algoritmasi
+├── visualize.py          # Istatistiksel analiz ve gorsellestirme
+├── examples.py           # 8 farkli kullanim ornegi
+├── requirements.txt      # Gerekli kutuphaneler
 ├── README.md            # Bu dosya
-└── .gitignore           # Git ignore dosyası
+└── .gitignore           # Git ignore dosyasi
 ```
 
-## 🛠️ Kurulum
+## Kurulum
 
-### 1. Gerekli Kütüphaneleri Yükleyin
+### 1. Gerekli Kutuphaneleri Yukleyin
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### 2. Temel Kullanım
+### 2. Temel Kullanim
 
 ```python
 from random_generator import LCGRandomGenerator
 
-# Üreteci başlat
 rng = LCGRandomGenerator(seed=42)
 
-# 0-1 arası rastgele sayı
-print(rng.random())  # Örnek: 0.654321
+print(rng.random())
 
-# Belirli aralıkta tam sayı
-print(rng.randint(1, 100))  # Örnek: 73
+print(rng.randint(1, 100))
 
-# Listeden rastgele seçim
 fruits = ["Elma", "Armut", "Muz"]
-print(rng.choice(fruits))  # Örnek: "Muz"
+print(rng.choice(fruits))
 ```
 
-## 📊 Çalıştırma
+## Calistirma
 
 ### Ana Algoritma Testi
 
@@ -77,113 +73,98 @@ print(rng.choice(fruits))  # Örnek: "Muz"
 python random_generator.py
 ```
 
-### İstatistiksel Analiz ve Görselleştirme
+### Istatistiksel Analiz ve Gorsellestirme
 
 ```bash
 python visualize.py
 ```
 
-Bu komut aşağıdaki dosyaları oluşturur:
-- `histogram.png` - Dağılım histogramı
-- `scatter_2d.png` - 2D korelasyon grafiği
-- `scatter_3d.png` - 3D korelasyon grafiği
+Bu komut asagidaki dosyalari olusturur:
+- `histogram.png` - Dagilim histogrami
+- `scatter_2d.png` - 2D korelasyon grafigi
+- `scatter_3d.png` - 3D korelasyon grafigi
 
-### Kullanım Örnekleri
+### Kullanim Ornekleri
 
 ```bash
 python examples.py
 ```
 
-Bu komut 8 farklı örnek senaryoyu çalıştırır:
-1. ✅ Temel kullanım
-2. 🎲 Zar atma simülasyonu
-3. 🎰 Piyango numarası üretme
-4. 🔐 Rastgele şifre oluşturma
-5. 🥧 Monte Carlo ile Pi tahmini
-6. 🃏 Kart destesi karıştırma
-7. ⚖️ Ağırlıklı rastgele seçim
-8. 🚶 Rastgele yürüyüş simülasyonu
+Bu komut 8 farkli ornek senaryoyu calistirir:
+1. Temel kullanim
+2. Zar atma simulasyonu
+3. Piyango numarasi uretme
+4. Rastgele sifre olusturma
+5. Monte Carlo ile Pi tahmini
+6. Kart destesi karistirma
+7. Agirlikli rastgele secim
+8. Rastgele yuruyus simulasyonu
 
-## 📈 API Referansı
+## API Referansi
 
-### `LCGRandomGenerator` Sınıfı
+### `LCGRandomGenerator` Sinifi
 
 #### `__init__(seed=None)`
-Üreticiyi başlatır. Seed verilmezse sistem zamanı kullanılır.
+Ureticiyi baslatir. Seed verilmezse sistem zamani kullanilir.
 
 #### `random() -> float`
-0.0 ile 1.0 arasında rastgele ondalık sayı döndürür.
+0.0 ile 1.0 arasinda rastgele ondalik sayi dondurur.
 
 #### `randint(a, b) -> int`
-a ile b arasında (ikisi de dahil) rastgele tam sayı döndürür.
+a ile b arasinda (ikisi de dahil) rastgele tam sayi dondurur.
 
 #### `choice(sequence) -> any`
-Verilen listeden rastgele bir eleman seçer.
+Verilen listeden rastgele bir eleman secer.
 
 #### `shuffle(items) -> list`
-Listeyi Fisher-Yates algoritması ile karıştırır.
+Listeyi Fisher-Yates algoritmasi ile karistirir.
 
 #### `sample(population, k) -> list`
-Popülasyondan k adet benzersiz rastgele örnek seçer.
+Populasyondan k adet benzersiz rastgele ornek secer.
 
 #### `reset(seed=None)`
-Üreteciyi yeniden başlatır.
+Ureticiyi yeniden baslatir.
 
 #### `get_state() -> dict`
-Üretecin mevcut durumunu döndürür.
+Uretecin mevcut durumunu dondurur.
 
-## 🧪 İstatistiksel Testler
+## Istatistiksel Testler
 
-Proje, üretilen sayıların kalitesini değerlendirmek için şu testleri içerir:
+Proje, uretilen sayilarin kalitesini degerlendirmek icin su testleri icerir:
 
-1. **Dağılım Analizi**: Ortalama, standart sapma, min/max değerler
-2. **Chi-Square Testi**: Uniform dağılım kontrolü
-3. **Korelasyon Analizi**: 2D ve 3D scatter plot'lar ile görsel inceleme
+1. **Dagilim Analizi**: Ortalama, standart sapma, min/max degerler
+2. **Chi-Square Testi**: Uniform dagilim kontrolu
+3. **Korelasyon Analizi**: 2D ve 3D scatter plot'lar ile gorsel inceleme
 
-## 📸 Örnek Çıktılar
+## Kullanim Senaryolari
 
-### Histogram
-![Histogram Örneği](histogram.png)
+- Oyun gelistirme (zar, kart oyunlari)
+- Guvenli olmayan sifre/token uretimi
+- Monte Carlo simulasyonlari
+- Egitim ve ogretim amacli
+- Piyango ve rastgele secim sistemleri
 
-### 2D Korelasyon
-![2D Scatter Örneği](scatter_2d.png)
+## Onemli Notlar
 
-### 3D Korelasyon
-![3D Scatter Örneği](scatter_3d.png)
+**Kriptografik Amaclar Icin Kullanmayin!**
 
-## 🎯 Kullanım Senaryoları
+LCG algoritmasi deterministiktir ve tahmin edilebilirdir. Guvenlik gerektiren uygulamalar icin (sifreleme, guvenli token uretimi vb.) `secrets` modulunu kullanin.
 
-- 🎲 Oyun geliştirme (zar, kart oyunları)
-- 🔐 Güvenli olmayan şifre/token üretimi
-- 📊 Monte Carlo simülasyonları
-- 🧪 Eğitim ve öğretim amaçlı
-- 🎰 Piyango ve rastgele seçim sistemleri
+**Egitim Amacli**
 
-## ⚠️ Önemli Notlar
+Bu proje, rastgele sayi uretimi algoritmalarini ogretmek icin tasarlanmistir. Uretim ortaminda Python'un yerlesik `random` modulunu kullanmaniz onerilir.
 
-> [!WARNING]
-> **Kriptografik Amaçlar İçin Kullanmayin!**  
-> LCG algoritması deterministiktir ve tahmin edilebilirdir. Güvenlik gerektiren uygulamalar için (şifreleme, güvenli token üretimi vb.) `secrets` modülünü kullanın.
-
-> [!NOTE]
-> **Eğitim Amaçlı**  
-> Bu proje, rastgele sayı üretimi algoritmalarını öğretmek için tasarlanmıştır. Üretim ortamında Python'un yerleşik `random` modülünü kullanmanız önerilir.
-
-## 📚 Referanslar
+## Referanslar
 
 - [Wikipedia - Linear Congruential Generator](https://en.wikipedia.org/wiki/Linear_congruential_generator)
 - Numerical Recipes in C (Press, Teukolsky, Vetterling, Flannery)
 - Park, S. K., & Miller, K. W. (1988). Random Number Generators: Good Ones Are Hard To Find
 
-## 👤 Yazar
+## Yazar
 
 **Suzan**  
 Beyza Hoca - Kriptografi Dersi Projesi
 
-## 📝 Lisans
+## Lisans
 
-Bu proje eğitim amaçlı geliştirilmiştir ve serbestçe kullanılabilir.
-
----
-
-⭐ **Beğendiyseniz yıldız vermeyi unutmayın!**
+Bu proje egitim amacli gelistirilmistir ve serbest kullanilabilir.
