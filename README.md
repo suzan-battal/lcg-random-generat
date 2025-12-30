@@ -177,9 +177,8 @@ Proje, üretilen sayıların kalitesini değerlendirmek için şu testleri içer
 
 ## 👤 Yazar
 
-**[İsminiz]**  
-📧 [Email adresiniz]  
-🎓 [Üniversite/Bölüm]
+**Suzan**  
+Beyza Hoca - Kriptografi Dersi Projesi
 
 ## 📝 Lisans
 
